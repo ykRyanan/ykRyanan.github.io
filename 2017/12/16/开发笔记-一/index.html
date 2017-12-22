@@ -79,13 +79,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="ykRyan&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="作者：杂雾无尘链接：http://www.jianshu.com/p/1ff9e44ccc78  11、iOS8中实现侧滑功能的时候这个方法必须实现，要不然在iOS8中无法侧滑1234// 必须写的方法，和editActionsForRowAtIndexPath配对使用，里面什么不写也行- (void)tableView:(UITableView *)tableView commitEditin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发笔记(一)">
+<meta property="og:url" content="http://yoursite.com/2017/12/16/开发笔记-一/index.html">
 <meta property="og:site_name" content="ykRyan&#39;s blog">
+<meta property="og:description" content="作者：杂雾无尘链接：http://www.jianshu.com/p/1ff9e44ccc78  11、iOS8中实现侧滑功能的时候这个方法必须实现，要不然在iOS8中无法侧滑1234// 必须写的方法，和editActionsForRowAtIndexPath配对使用，里面什么不写也行- (void)tableView:(UITableView *)tableView commitEditin">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1432270-8b75d749ac20c31e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-12-22T08:50:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ykRyan&#39;s blog">
+<meta name="twitter:title" content="开发笔记(一)">
+<meta name="twitter:description" content="作者：杂雾无尘链接：http://www.jianshu.com/p/1ff9e44ccc78  11、iOS8中实现侧滑功能的时候这个方法必须实现，要不然在iOS8中无法侧滑1234// 必须写的方法，和editActionsForRowAtIndexPath配对使用，里面什么不写也行- (void)tableView:(UITableView *)tableView commitEditin">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1432270-8b75d749ac20c31e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -115,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/16/开发笔记-一/"/>
 
 
 
 
 
-  <title>ykRyan's blog</title>
+  <title>开发笔记(一) | ykRyan's blog</title>
   
 
 
@@ -140,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,600 +219,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/19/工具小func/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ykRyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ykRyan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/19/工具小func/" itemprop="url">小func</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-19T13:45:33+08:00">
-                2017-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="大小端换位-Data-gt-int"><a href="#大小端换位-Data-gt-int" class="headerlink" title="大小端换位 Data -&gt; int"></a>大小端换位 Data -&gt; int</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//大小端换位 Data -&gt; int</span><br><span class="line">-(int)convertToLittleEndian:(NSData *)data</span><br><span class="line">&#123;</span><br><span class="line">    Byte *endiaB = (Byte *)[data bytes];</span><br><span class="line">    Byte temp = endiaB[0];</span><br><span class="line">    endiaB[0] = endiaB[1];</span><br><span class="line">    endiaB[1] = temp;</span><br><span class="line">    NSData *resultD = [NSData dataWithBytes:endiaB length:data.length];</span><br><span class="line">    </span><br><span class="line">    int lengthS;</span><br><span class="line">    [resultD getBytes:&amp;lengthS length:sizeof(lengthS)];</span><br><span class="line">    </span><br><span class="line">    return lengthS;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/16/正则表达式/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ykRyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ykRyan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/16/正则表达式/" itemprop="url">正则表达式</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-16T13:45:33+08:00">
-                2017-12-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="判断是否为电话号码"><a href="#判断是否为电话号码" class="headerlink" title="判断是否为电话号码"></a>判断是否为电话号码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^[1][34578][0-9]&#123;9&#125;$</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>表示1开头<br>第二位为3-8<br>第三位为0-9<br>0-9重复9次即2+9=11总共11位数</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)isMobileNumber</span><br><span class="line">&#123;</span><br><span class="line">NSString * phoneRegex = @&quot;^[1][34578][0-9]&#123;9&#125;$&quot;;</span><br><span class="line">NSPredicate *pre=[NSPredicate predicateWithFormat:@&quot;SELF MATCHES %@&quot;,phoneRegex];</span><br><span class="line">BOOL isMatch = [pre evaluateWithObject:self];</span><br><span class="line">return isMatch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h4 id="判断是否为只包含数字和字母6－20位密码"><a href="#判断是否为只包含数字和字母6－20位密码" class="headerlink" title="判断是否为只包含数字和字母6－20位密码"></a>判断是否为只包含数字和字母6－20位密码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^[0-9a-zA-Z_@.]&#123;6,20&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>表示包括0-9 a-z A-Z _ @和.<br>6到20位</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)isRegexPassword</span><br><span class="line">&#123;</span><br><span class="line">NSString * phoneRegex = @&quot;^[0-9a-zA-Z_@.]&#123;6,20&#125;&quot;;</span><br><span class="line">NSPredicate *pre=[NSPredicate predicateWithFormat:@&quot;SELF MATCHES %@&quot;,phoneRegex];</span><br><span class="line">BOOL isMatch = [pre evaluateWithObject:self];</span><br><span class="line">return isMatch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h4 id="判断是否为中文字符或字母或数字及空格"><a href="#判断是否为中文字符或字母或数字及空格" class="headerlink" title="判断是否为中文字符或字母或数字及空格"></a>判断是否为中文字符或字母或数字及空格</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^[\u4e00-\u9fa5_a-zA-Z0-9 ]+$</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>表示中文字符<br>下划线_<br>a-z<br>A-Z<br>0-9<br>空格</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)isChineseCharacter&#123;</span><br><span class="line">NSString *regex = @&quot;^[\u4e00-\u9fa5_a-zA-Z0-9]+$&quot;;</span><br><span class="line">NSPredicate *pred = [NSPredicate predicateWithFormat:@&quot;SELF MATCHES %@&quot;, regex];</span><br><span class="line">BOOL isMatch = [pred evaluateWithObject:self];</span><br><span class="line">return isMatch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h4 id="判断是否为qq号码"><a href="#判断是否为qq号码" class="headerlink" title="判断是否为qq号码"></a>判断是否为qq号码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1-9][0-9]&#123;4,&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>第一位包括1-9<br>其他包括0-9<br>四位数开始没有上限</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)isQQNumberCharacter&#123;</span><br><span class="line">NSString *regex = @&quot;[1-9][0-9]&#123;4,&#125;&quot;;</span><br><span class="line">NSPredicate *pred = [NSPredicate predicateWithFormat:@&quot;SELF MATCHES %@&quot;, regex];</span><br><span class="line">BOOL isMatch = [pred evaluateWithObject:self];</span><br><span class="line">return isMatch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h4 id="判断是否有效邮箱号码"><a href="#判断是否有效邮箱号码" class="headerlink" title="判断是否有效邮箱号码"></a>判断是否有效邮箱号码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]&#123;2,4&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>表示包括A-Z 0-9 a-z . _ % + - 等字符<br>&amp;&amp;**%）……%%……不解释了</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)isValidateEmail&#123;</span><br><span class="line">NSString *emailRegex = @&quot;[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]&#123;2,4&#125;&quot;;</span><br><span class="line">NSPredicate *emailTest = [NSPredicate predicateWithFormat:@&quot;SELF MATCHES %@&quot;, emailRegex];</span><br><span class="line">return [emailTest evaluateWithObject:self];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h4 id="判断是否enmoji表情"><a href="#判断是否enmoji表情" class="headerlink" title="判断是否enmoji表情"></a>判断是否enmoji表情</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)isContainsTwoEmoji</span><br><span class="line">&#123;</span><br><span class="line">__block BOOL isEomji = NO;</span><br><span class="line">[self enumerateSubstringsInRange:NSMakeRange(0, [self length]) options:NSStringEnumerationByComposedCharacterSequences usingBlock:</span><br><span class="line">^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) &#123;</span><br><span class="line">const unichar hs = [substring characterAtIndex:0];</span><br><span class="line">//         NSLog(@&quot;hs++++++++%04x&quot;,hs);</span><br><span class="line">if (0xd800 &lt;= hs &amp;&amp; hs &lt;= 0xdbff) &#123;</span><br><span class="line">if (substring.length &gt; 1) &#123;</span><br><span class="line">const unichar ls = [substring characterAtIndex:1];</span><br><span class="line">const int uc = ((hs - 0xd800) * 0x400) + (ls - 0xdc00) + 0x10000;</span><br><span class="line">if (0x1d000 &lt;= uc &amp;&amp; uc &lt;= 0x1f77f)</span><br><span class="line">&#123;</span><br><span class="line">isEomji = YES;</span><br><span class="line">&#125;</span><br><span class="line">//                 NSLog(@&quot;uc++++++++%04x&quot;,uc);</span><br><span class="line">&#125;</span><br><span class="line">&#125; else if (substring.length &gt; 1) &#123;</span><br><span class="line">const unichar ls = [substring characterAtIndex:1];</span><br><span class="line">if (ls == 0x20e3|| ls ==0xfe0f) &#123;</span><br><span class="line">isEomji = YES;</span><br><span class="line">&#125;</span><br><span class="line">//             NSLog(@&quot;ls++++++++%04x&quot;,ls);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">if (0x2100 &lt;= hs &amp;&amp; hs &lt;= 0x27ff &amp;&amp; hs != 0x263b) &#123;</span><br><span class="line">isEomji = YES;</span><br><span class="line">&#125; else if (0x2B05 &lt;= hs &amp;&amp; hs &lt;= 0x2b07) &#123;</span><br><span class="line">isEomji = YES;</span><br><span class="line">&#125; else if (0x2934 &lt;= hs &amp;&amp; hs &lt;= 0x2935) &#123;</span><br><span class="line">isEomji = YES;</span><br><span class="line">&#125; else if (0x3297 &lt;= hs &amp;&amp; hs &lt;= 0x3299) &#123;</span><br><span class="line">isEomji = YES;</span><br><span class="line">&#125; else if (hs == 0xa9 || hs == 0xae || hs == 0x303d || hs == 0x3030 || hs == 0x2b55 || hs == 0x2b1c || hs == 0x2b1b || hs == 0x2b50|| hs == 0x231a ) &#123;</span><br><span class="line">isEomji = YES;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;];</span><br><span class="line">return isEomji;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/16/MarkDown语法笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ykRyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ykRyan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/16/MarkDown语法笔记/" itemprop="url">MarkDown语法笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-16T13:37:51+08:00">
-                2017-12-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>作者：简书<br>链接：<a href="http://www.jianshu.com/p/q81RER" target="_blank" rel="noopener">http://www.jianshu.com/p/q81RER</a></p>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><ul>
-<li>文本1</li>
-<li>文本2</li>
-<li>文本3</li>
-</ul>
-<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><ol>
-<li>文本1</li>
-<li>文本2</li>
-<li>文本3</li>
-</ol>
-<h2 id="链接与图片"><a href="#链接与图片" class="headerlink" title="链接与图片"></a>链接与图片</h2><p><a href="http://www.jianshu.com" target="_blank" rel="noopener">简书</a></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/259-0ad0d0bfc1c608b6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>##引用</p>
-<blockquote>
-<p>一盏灯， 一片昏黄；一简书， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！保持淡定， 人生从此不再寂寞。</p>
-</blockquote>
-<h2 id="诗的引用"><a href="#诗的引用" class="headerlink" title="诗的引用"></a>诗的引用</h2><blockquote>
-<p>朝辞<strong>白帝</strong>彩云间<br>千里<em>江陵</em>一日还<br>两<br>轻</p>
-</blockquote>
-<h2 id="粗体-amp-斜体"><a href="#粗体-amp-斜体" class="headerlink" title="粗体 &amp; 斜体"></a>粗体 &amp; 斜体</h2><blockquote>
-<p>这是 <strong>粗体</strong><br>这是 <em>斜体</em></p>
-</blockquote>
-<h2 id="代码引用"><a href="#代码引用" class="headerlink" title="代码引用"></a>代码引用</h2><p><code>hello world</code></p>
-<h2 id="多段代码引用"><a href="#多段代码引用" class="headerlink" title="多段代码引用"></a>多段代码引用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">NSMutableArray *allViewControllers = [NSMutableArray arrayWithArray:[self.navigationController viewControllers]];</span><br><span class="line">for (UIViewController *aViewController in allViewControllers) &#123;</span><br><span class="line">if ([aViewController isKindOfClass:[RequiredViewController class]]) &#123;</span><br><span class="line">[self.navigationController popToViewController:aViewController animated:NO];</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>Tables</th>
-<th style="text-align:center">Are</th>
-<th style="text-align:right">Cool</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>col 3 is</td>
-<td style="text-align:center">right-aligned</td>
-<td style="text-align:right">$1600</td>
-</tr>
-<tr>
-<td>col 2 is</td>
-<td style="text-align:center">centered</td>
-<td style="text-align:right">$12</td>
-</tr>
-<tr>
-<td>zebra stripes</td>
-<td style="text-align:center">are neat</td>
-<td style="text-align:right">$1</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>dog</th>
-<th>bird</th>
-<th>cat</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>foo</td>
-<td>foo</td>
-<td>foo</td>
-</tr>
-<tr>
-<td>bar</td>
-<td>bar</td>
-<td>bar</td>
-</tr>
-<tr>
-<td>baz</td>
-<td>baz</td>
-<td>baz</td>
-</tr>
-</tbody>
-</table>
-<p>作者：简书<br>链接：<a href="http://www.jianshu.com/p/q81RER" target="_blank" rel="noopener">http://www.jianshu.com/p/q81RER</a></p>
-<p><img src="http://latex.codecogs.com/gif.latex?\prod%20\(n_{i}\" alt="">+1)</p>
-<h1 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h1><p><img src="http://latex.codecogs.com/gif.latex?\prod%20\(n_{i}\)+1" alt=""></p>
-<p>链接：<a href="http://www.jianshu.com/p/q81RER" target="_blank" rel="noopener">http://www.jianshu.com/p/q81RER</a>  最后显示的<strong><em>链接中带括号的图片</em></strong></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/16/PUBG/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ykRyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ykRyan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/16/PUBG/" itemprop="url">🐰🐰🐰 & 大屁眼子</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-16T10:58:25+08:00">
-                2017-12-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!--大吉大利 今晚吃鸡呀-->
-<p><center>大吉大利 今晚吃鸡呀</center></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -837,9 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/16/开发笔记-一/" itemprop="url">开发笔记(一)</a></h1>
+          <h1 class="post-title" itemprop="name headline">开发笔记(一)</h1>
         
 
         <div class="post-meta">
@@ -889,9 +301,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p>作者：杂雾无尘<br>链接：<a href="http://www.jianshu.com/p/1ff9e44ccc78" target="_blank" rel="noopener">http://www.jianshu.com/p/1ff9e44ccc78</a></p>
 </blockquote>
 <h4 id="11、iOS8中实现侧滑功能的时候这个方法必须实现，要不然在iOS8中无法侧滑"><a href="#11、iOS8中实现侧滑功能的时候这个方法必须实现，要不然在iOS8中无法侧滑" class="headerlink" title="11、iOS8中实现侧滑功能的时候这个方法必须实现，要不然在iOS8中无法侧滑"></a>11、iOS8中实现侧滑功能的时候这个方法必须实现，要不然在iOS8中无法侧滑</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 必须写的方法，和editActionsForRowAtIndexPath配对使用，里面什么不写也行</span><br><span class="line">- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1007,8 +417,6 @@
 <h4 id="144、为一个view添加虚线边框"><a href="#144、为一个view添加虚线边框" class="headerlink" title="144、为一个view添加虚线边框"></a>144、为一个view添加虚线边框</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CAShapeLayer *border = [CAShapeLayer layer];</span><br><span class="line">border.strokeColor = [UIColor colorWithRed:67/255.0f green:37/255.0f blue:83/255.0f alpha:1].CGColor;</span><br><span class="line">border.fillColor = nil;</span><br><span class="line">border.lineDashPattern = @[@4, @2];</span><br><span class="line">border.path = [UIBezierPath bezierPathWithRect:view.bounds].CGPath;</span><br><span class="line">border.frame = view.bounds;</span><br><span class="line">[view.layer addSublayer:border];</span><br></pre></td></tr></table></figure>
 <h4 id="145、UITextView中打开或禁用复制，剪切，选择，全选等功能"><a href="#145、UITextView中打开或禁用复制，剪切，选择，全选等功能" class="headerlink" title="145、UITextView中打开或禁用复制，剪切，选择，全选等功能"></a>145、UITextView中打开或禁用复制，剪切，选择，全选等功能</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 继承UITextView重写这个方法</span><br><span class="line">- (BOOL)canPerformAction:(SEL)action withSender:(id)sender</span><br><span class="line">&#123;</span><br><span class="line">// 返回NO为禁用，YES为开启</span><br><span class="line">// 粘贴</span><br><span class="line">if (action == @selector(paste:)) return NO;</span><br><span class="line">// 剪切</span><br><span class="line">if (action == @selector(cut:)) return NO;</span><br><span class="line">// 复制</span><br><span class="line">if (action == @selector(copy:)) return NO;</span><br><span class="line">// 选择</span><br><span class="line">if (action == @selector(select:)) return NO;</span><br><span class="line">// 选中全部</span><br><span class="line">if (action == @selector(selectAll:)) return NO;</span><br><span class="line">// 删除</span><br><span class="line">if (action == @selector(delete:)) return NO;</span><br><span class="line">// 分享</span><br><span class="line">if (action == @selector(share)) return NO;</span><br><span class="line">return [super canPerformAction:action withSender:sender];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
     
@@ -1025,140 +433,32 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/16/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ykRyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ykRyan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/16/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-16T09:57:37+08:00">
-                2017-12-16
-              </time>
+              <a href="/2017/12/16/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
+              <a href="/2017/12/16/PUBG/" rel="prev" title="🐰🐰🐰 & 大屁眼子">
+                🐰🐰🐰 & 大屁眼子 <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1168,10 +468,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1179,6 +480,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1199,8 +504,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1253,6 +567,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#11、iOS8中实现侧滑功能的时候这个方法必须实现，要不然在iOS8中无法侧滑"><span class="nav-number">1.</span> <span class="nav-text"><a href="#11&#x3001;iOS8&#x4E2D;&#x5B9E;&#x73B0;&#x4FA7;&#x6ED1;&#x529F;&#x80FD;&#x7684;&#x65F6;&#x5019;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5FC5;&#x987B;&#x5B9E;&#x73B0;&#xFF0C;&#x8981;&#x4E0D;&#x7136;&#x5728;iOS8&#x4E2D;&#x65E0;&#x6CD5;&#x4FA7;&#x6ED1;" class="headerlink" title="11&#x3001;iOS8&#x4E2D;&#x5B9E;&#x73B0;&#x4FA7;&#x6ED1;&#x529F;&#x80FD;&#x7684;&#x65F6;&#x5019;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5FC5;&#x987B;&#x5B9E;&#x73B0;&#xFF0C;&#x8981;&#x4E0D;&#x7136;&#x5728;iOS8&#x4E2D;&#x65E0;&#x6CD5;&#x4FA7;&#x6ED1;"></a>11&#x3001;iOS8&#x4E2D;&#x5B9E;&#x73B0;&#x4FA7;&#x6ED1;&#x529F;&#x80FD;&#x7684;&#x65F6;&#x5019;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5FC5;&#x987B;&#x5B9E;&#x73B0;&#xFF0C;&#x8981;&#x4E0D;&#x7136;&#x5728;iOS8&#x4E2D;&#x65E0;&#x6CD5;&#x4FA7;&#x6ED1;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#19、collectionView的内容小于其宽高的时候是不能滚动的，设置可以滚动："><span class="nav-number">2.</span> <span class="nav-text"><a href="#19&#x3001;collectionView&#x7684;&#x5185;&#x5BB9;&#x5C0F;&#x4E8E;&#x5176;&#x5BBD;&#x9AD8;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E0D;&#x80FD;&#x6EDA;&#x52A8;&#x7684;&#xFF0C;&#x8BBE;&#x7F6E;&#x53EF;&#x4EE5;&#x6EDA;&#x52A8;&#xFF1A;" class="headerlink" title="19&#x3001;collectionView&#x7684;&#x5185;&#x5BB9;&#x5C0F;&#x4E8E;&#x5176;&#x5BBD;&#x9AD8;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E0D;&#x80FD;&#x6EDA;&#x52A8;&#x7684;&#xFF0C;&#x8BBE;&#x7F6E;&#x53EF;&#x4EE5;&#x6EDA;&#x52A8;&#xFF1A;"></a>19&#x3001;collectionView&#x7684;&#x5185;&#x5BB9;&#x5C0F;&#x4E8E;&#x5176;&#x5BBD;&#x9AD8;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E0D;&#x80FD;&#x6EDA;&#x52A8;&#x7684;&#xFF0C;&#x8BBE;&#x7F6E;&#x53EF;&#x4EE5;&#x6EDA;&#x52A8;&#xFF1A;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#20、设置navigationBar上的title颜色和大小"><span class="nav-number">3.</span> <span class="nav-text"><a href="#20&#x3001;&#x8BBE;&#x7F6E;navigationBar&#x4E0A;&#x7684;title&#x989C;&#x8272;&#x548C;&#x5927;&#x5C0F;" class="headerlink" title="20&#x3001;&#x8BBE;&#x7F6E;navigationBar&#x4E0A;&#x7684;title&#x989C;&#x8272;&#x548C;&#x5927;&#x5C0F;"></a>20&#x3001;&#x8BBE;&#x7F6E;navigationBar&#x4E0A;&#x7684;title&#x989C;&#x8272;&#x548C;&#x5927;&#x5C0F;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#22、view设置圆角-这种define方法很吊"><span class="nav-number">4.</span> <span class="nav-text"><a href="#22&#x3001;view&#x8BBE;&#x7F6E;&#x5706;&#x89D2;-&#x8FD9;&#x79CD;define&#x65B9;&#x6CD5;&#x5F88;&#x540A;" class="headerlink" title="22&#x3001;view&#x8BBE;&#x7F6E;&#x5706;&#x89D2;(&#x8FD9;&#x79CD;define&#x65B9;&#x6CD5;&#x5F88;&#x540A;)"></a>22&#x3001;view&#x8BBE;&#x7F6E;&#x5706;&#x89D2;(&#x8FD9;&#x79CD;define&#x65B9;&#x6CD5;&#x5F88;&#x540A;)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#23、强／弱引用"><span class="nav-number">5.</span> <span class="nav-text"><a href="#23&#x3001;&#x5F3A;&#xFF0F;&#x5F31;&#x5F15;&#x7528;" class="headerlink" title="23&#x3001;&#x5F3A;&#xFF0F;&#x5F31;&#x5F15;&#x7528;"></a>23&#x3001;&#x5F3A;&#xFF0F;&#x5F31;&#x5F15;&#x7528;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#24、由角度转换弧度"><span class="nav-number">6.</span> <span class="nav-text"><a href="#24&#x3001;&#x7531;&#x89D2;&#x5EA6;&#x8F6C;&#x6362;&#x5F27;&#x5EA6;" class="headerlink" title="24&#x3001;&#x7531;&#x89D2;&#x5EA6;&#x8F6C;&#x6362;&#x5F27;&#x5EA6;"></a>24&#x3001;&#x7531;&#x89D2;&#x5EA6;&#x8F6C;&#x6362;&#x5F27;&#x5EA6;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#25、由弧度转换角度"><span class="nav-number">7.</span> <span class="nav-text"><a href="#25&#x3001;&#x7531;&#x5F27;&#x5EA6;&#x8F6C;&#x6362;&#x89D2;&#x5EA6;" class="headerlink" title="25&#x3001;&#x7531;&#x5F27;&#x5EA6;&#x8F6C;&#x6362;&#x89D2;&#x5EA6;"></a>25&#x3001;&#x7531;&#x5F27;&#x5EA6;&#x8F6C;&#x6362;&#x89D2;&#x5EA6;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#26、获取图片资源"><span class="nav-number">8.</span> <span class="nav-text"><a href="#26&#x3001;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x8D44;&#x6E90;" class="headerlink" title="26&#x3001;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x8D44;&#x6E90;"></a>26&#x3001;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x8D44;&#x6E90;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#27、获取temp"><span class="nav-number">9.</span> <span class="nav-text"><a href="#27&#x3001;&#x83B7;&#x53D6;temp" class="headerlink" title="27&#x3001;&#x83B7;&#x53D6;temp"></a>27&#x3001;&#x83B7;&#x53D6;temp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#28、获取沙盒-Document"><span class="nav-number">10.</span> <span class="nav-text"><a href="#28&#x3001;&#x83B7;&#x53D6;&#x6C99;&#x76D2;-Document" class="headerlink" title="28&#x3001;&#x83B7;&#x53D6;&#x6C99;&#x76D2; Document"></a>28&#x3001;&#x83B7;&#x53D6;&#x6C99;&#x76D2; Document</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#29、获取沙盒-Cache"><span class="nav-number">11.</span> <span class="nav-text"><a href="#29&#x3001;&#x83B7;&#x53D6;&#x6C99;&#x76D2;-Cache" class="headerlink" title="29&#x3001;&#x83B7;&#x53D6;&#x6C99;&#x76D2; Cache"></a>29&#x3001;&#x83B7;&#x53D6;&#x6C99;&#x76D2; Cache</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#31、自定义NSLog"><span class="nav-number">12.</span> <span class="nav-text"><a href="#31&#x3001;&#x81EA;&#x5B9A;&#x4E49;NSLog" class="headerlink" title="31&#x3001;&#x81EA;&#x5B9A;&#x4E49;NSLog"></a>31&#x3001;&#x81EA;&#x5B9A;&#x4E49;NSLog</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#32、Font"><span class="nav-number">13.</span> <span class="nav-text"><a href="#32&#x3001;Font" class="headerlink" title="32&#x3001;Font"></a>32&#x3001;Font</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#33、FORMAT"><span class="nav-number">14.</span> <span class="nav-text"><a href="#33&#x3001;FORMAT" class="headerlink" title="33&#x3001;FORMAT"></a>33&#x3001;FORMAT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#34、在主线程上运行"><span class="nav-number">15.</span> <span class="nav-text"><a href="#34&#x3001;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E0A;&#x8FD0;&#x884C;" class="headerlink" title="34&#x3001;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E0A;&#x8FD0;&#x884C;"></a>34&#x3001;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E0A;&#x8FD0;&#x884C;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#35、开启异步线程"><span class="nav-number">16.</span> <span class="nav-text"><a href="#35&#x3001;&#x5F00;&#x542F;&#x5F02;&#x6B65;&#x7EBF;&#x7A0B;" class="headerlink" title="35&#x3001;&#x5F00;&#x542F;&#x5F02;&#x6B65;&#x7EBF;&#x7A0B;"></a>35&#x3001;&#x5F00;&#x542F;&#x5F02;&#x6B65;&#x7EBF;&#x7A0B;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#36、通知"><span class="nav-number">17.</span> <span class="nav-text"><a href="#36&#x3001;&#x901A;&#x77E5;" class="headerlink" title="36&#x3001;&#x901A;&#x77E5;"></a>36&#x3001;&#x901A;&#x77E5;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#37、随机颜色"><span class="nav-number">18.</span> <span class="nav-text"><a href="#37&#x3001;&#x968F;&#x673A;&#x989C;&#x8272;" class="headerlink" title="37&#x3001;&#x968F;&#x673A;&#x989C;&#x8272;"></a>37&#x3001;&#x968F;&#x673A;&#x989C;&#x8272;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#38、获取window"><span class="nav-number">19.</span> <span class="nav-text"><a href="#38&#x3001;&#x83B7;&#x53D6;window" class="headerlink" title="38&#x3001;&#x83B7;&#x53D6;window"></a>38&#x3001;&#x83B7;&#x53D6;window</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#39、修改textField的placeholder的字体颜色、大小"><span class="nav-number">20.</span> <span class="nav-text"><a href="#39&#x3001;&#x4FEE;&#x6539;textField&#x7684;placeholder&#x7684;&#x5B57;&#x4F53;&#x989C;&#x8272;&#x3001;&#x5927;&#x5C0F;" class="headerlink" title="39&#x3001;&#x4FEE;&#x6539;textField&#x7684;placeholder&#x7684;&#x5B57;&#x4F53;&#x989C;&#x8272;&#x3001;&#x5927;&#x5C0F;"></a>39&#x3001;&#x4FEE;&#x6539;textField&#x7684;placeholder&#x7684;&#x5B57;&#x4F53;&#x989C;&#x8272;&#x3001;&#x5927;&#x5C0F;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#40、统一收起键盘"><span class="nav-number">21.</span> <span class="nav-text"><a href="#40&#x3001;&#x7EDF;&#x4E00;&#x6536;&#x8D77;&#x952E;&#x76D8;" class="headerlink" title="40&#x3001;&#x7EDF;&#x4E00;&#x6536;&#x8D77;&#x952E;&#x76D8;"></a>40&#x3001;&#x7EDF;&#x4E00;&#x6536;&#x8D77;&#x952E;&#x76D8;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#41、控制屏幕旋转，在控制器中写"><span class="nav-number">22.</span> <span class="nav-text"><a href="#41&#x3001;&#x63A7;&#x5236;&#x5C4F;&#x5E55;&#x65CB;&#x8F6C;&#xFF0C;&#x5728;&#x63A7;&#x5236;&#x5668;&#x4E2D;&#x5199;" class="headerlink" title="41&#x3001;&#x63A7;&#x5236;&#x5C4F;&#x5E55;&#x65CB;&#x8F6C;&#xFF0C;&#x5728;&#x63A7;&#x5236;&#x5668;&#x4E2D;&#x5199;"></a>41&#x3001;&#x63A7;&#x5236;&#x5C4F;&#x5E55;&#x65CB;&#x8F6C;&#xFF0C;&#x5728;&#x63A7;&#x5236;&#x5668;&#x4E2D;&#x5199;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#42、获取app缓存大小"><span class="nav-number">23.</span> <span class="nav-text"><a href="#42&#x3001;&#x83B7;&#x53D6;app&#x7F13;&#x5B58;&#x5927;&#x5C0F;" class="headerlink" title="42&#x3001;&#x83B7;&#x53D6;app&#x7F13;&#x5B58;&#x5927;&#x5C0F;"></a>42&#x3001;&#x83B7;&#x53D6;app&#x7F13;&#x5B58;&#x5927;&#x5C0F;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#43、清理app缓存"><span class="nav-number">24.</span> <span class="nav-text"><a href="#43&#x3001;&#x6E05;&#x7406;app&#x7F13;&#x5B58;" class="headerlink" title="43&#x3001;&#x6E05;&#x7406;app&#x7F13;&#x5B58;"></a>43&#x3001;&#x6E05;&#x7406;app&#x7F13;&#x5B58;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#44、模型转字典"><span class="nav-number">25.</span> <span class="nav-text"><a href="#44&#x3001;&#x6A21;&#x578B;&#x8F6C;&#x5B57;&#x5178;" class="headerlink" title="44&#x3001;&#x6A21;&#x578B;&#x8F6C;&#x5B57;&#x5178;"></a>44&#x3001;&#x6A21;&#x578B;&#x8F6C;&#x5B57;&#x5178;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#45、交换两个方法实现"><span class="nav-number">26.</span> <span class="nav-text"><a href="#45&#x3001;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;" class="headerlink" title="45&#x3001;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;"></a>45&#x3001;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#46、打印百分号和引号"><span class="nav-number">27.</span> <span class="nav-text"><a href="#46&#x3001;&#x6253;&#x5370;&#x767E;&#x5206;&#x53F7;&#x548C;&#x5F15;&#x53F7;" class="headerlink" title="46&#x3001;&#x6253;&#x5370;&#x767E;&#x5206;&#x53F7;&#x548C;&#x5F15;&#x53F7;"></a>46&#x3001;&#x6253;&#x5370;&#x767E;&#x5206;&#x53F7;&#x548C;&#x5F15;&#x53F7;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#48、获取手机型号"><span class="nav-number">28.</span> <span class="nav-text"><a href="#48&#x3001;&#x83B7;&#x53D6;&#x624B;&#x673A;&#x578B;&#x53F7;" class="headerlink" title="48&#x3001;&#x83B7;&#x53D6;&#x624B;&#x673A;&#x578B;&#x53F7;"></a>48&#x3001;&#x83B7;&#x53D6;&#x624B;&#x673A;&#x578B;&#x53F7;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#49、长按复制功能"><span class="nav-number">29.</span> <span class="nav-text"><a href="#49&#x3001;&#x957F;&#x6309;&#x590D;&#x5236;&#x529F;&#x80FD;" class="headerlink" title="49&#x3001;&#x957F;&#x6309;&#x590D;&#x5236;&#x529F;&#x80FD;"></a>49&#x3001;&#x957F;&#x6309;&#x590D;&#x5236;&#x529F;&#x80FD;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#50、cocoapods升级"><span class="nav-number">30.</span> <span class="nav-text"><a href="#50&#x3001;cocoapods&#x5347;&#x7EA7;" class="headerlink" title="50&#x3001;cocoapods&#x5347;&#x7EA7;"></a>50&#x3001;cocoapods&#x5347;&#x7EA7;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#52、判断图片类型"><span class="nav-number">31.</span> <span class="nav-text"><a href="#52&#x3001;&#x5224;&#x65AD;&#x56FE;&#x7247;&#x7C7B;&#x578B;" class="headerlink" title="52&#x3001;&#x5224;&#x65AD;&#x56FE;&#x7247;&#x7C7B;&#x578B;"></a>52&#x3001;&#x5224;&#x65AD;&#x56FE;&#x7247;&#x7C7B;&#x578B;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#53、获取手机和app信息"><span class="nav-number">32.</span> <span class="nav-text"><a href="#53&#x3001;&#x83B7;&#x53D6;&#x624B;&#x673A;&#x548C;app&#x4FE1;&#x606F;" class="headerlink" title="53&#x3001;&#x83B7;&#x53D6;&#x624B;&#x673A;&#x548C;app&#x4FE1;&#x606F;"></a>53&#x3001;&#x83B7;&#x53D6;&#x624B;&#x673A;&#x548C;app&#x4FE1;&#x606F;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#54、获取一个类的所有属性"><span class="nav-number">33.</span> <span class="nav-text"><a href="#54&#x3001;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;" class="headerlink" title="54&#x3001;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;"></a>54&#x3001;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#55、image圆角"><span class="nav-number">34.</span> <span class="nav-text"><a href="#55&#x3001;image&#x5706;&#x89D2;" class="headerlink" title="55&#x3001;image&#x5706;&#x89D2;"></a>55&#x3001;image&#x5706;&#x89D2;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#56、image拉伸"><span class="nav-number">35.</span> <span class="nav-text"><a href="#56&#x3001;image&#x62C9;&#x4F38;" class="headerlink" title="56&#x3001;image&#x62C9;&#x4F38;"></a>56&#x3001;image&#x62C9;&#x4F38;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#57、JSON字符串转字典"><span class="nav-number">36.</span> <span class="nav-text"><a href="#57&#x3001;JSON&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x5B57;&#x5178;" class="headerlink" title="57&#x3001;JSON&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x5B57;&#x5178;"></a>57&#x3001;JSON&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x5B57;&#x5178;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#58、身份证号验证"><span class="nav-number">37.</span> <span class="nav-text"><a href="#58&#x3001;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x9A8C;&#x8BC1;" class="headerlink" title="58&#x3001;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x9A8C;&#x8BC1;"></a>58&#x3001;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x9A8C;&#x8BC1;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#61、拿到当前正在显示的控制器，不管是push进去的，还是present进去的都能拿到"><span class="nav-number">38.</span> <span class="nav-text"><a href="#61&#x3001;&#x62FF;&#x5230;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x663E;&#x793A;&#x7684;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x4E0D;&#x7BA1;&#x662F;push&#x8FDB;&#x53BB;&#x7684;&#xFF0C;&#x8FD8;&#x662F;present&#x8FDB;&#x53BB;&#x7684;&#x90FD;&#x80FD;&#x62FF;&#x5230;" class="headerlink" title="61&#x3001;&#x62FF;&#x5230;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x663E;&#x793A;&#x7684;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x4E0D;&#x7BA1;&#x662F;push&#x8FDB;&#x53BB;&#x7684;&#xFF0C;&#x8FD8;&#x662F;present&#x8FDB;&#x53BB;&#x7684;&#x90FD;&#x80FD;&#x62FF;&#x5230;"></a>61&#x3001;&#x62FF;&#x5230;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x663E;&#x793A;&#x7684;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x4E0D;&#x7BA1;&#x662F;push&#x8FDB;&#x53BB;&#x7684;&#xFF0C;&#x8FD8;&#x662F;present&#x8FDB;&#x53BB;&#x7684;&#x90FD;&#x80FD;&#x62FF;&#x5230;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#62、runtime为一个类动态添加属性"><span class="nav-number">39.</span> <span class="nav-text"><a href="#62&#x3001;runtime&#x4E3A;&#x4E00;&#x4E2A;&#x7C7B;&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;" class="headerlink" title="62&#x3001;runtime&#x4E3A;&#x4E00;&#x4E2A;&#x7C7B;&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;"></a>62&#x3001;runtime&#x4E3A;&#x4E00;&#x4E2A;&#x7C7B;&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#65、Reachability判断网络状态"><span class="nav-number">40.</span> <span class="nav-text"><a href="#65&#x3001;Reachability&#x5224;&#x65AD;&#x7F51;&#x7EDC;&#x72B6;&#x6001;" class="headerlink" title="65&#x3001;Reachability&#x5224;&#x65AD;&#x7F51;&#x7EDC;&#x72B6;&#x6001;"></a>65&#x3001;Reachability&#x5224;&#x65AD;&#x7F51;&#x7EDC;&#x72B6;&#x6001;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#66、AFNetworking监听网络状态"><span class="nav-number">41.</span> <span class="nav-text"><a href="#66&#x3001;AFNetworking&#x76D1;&#x542C;&#x7F51;&#x7EDC;&#x72B6;&#x6001;" class="headerlink" title="66&#x3001;AFNetworking&#x76D1;&#x542C;&#x7F51;&#x7EDC;&#x72B6;&#x6001;"></a>66&#x3001;AFNetworking&#x76D1;&#x542C;&#x7F51;&#x7EDC;&#x72B6;&#x6001;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#67、透明颜色不影响子视图透明度"><span class="nav-number">42.</span> <span class="nav-text"><a href="#67&#x3001;&#x900F;&#x660E;&#x989C;&#x8272;&#x4E0D;&#x5F71;&#x54CD;&#x5B50;&#x89C6;&#x56FE;&#x900F;&#x660E;&#x5EA6;" class="headerlink" title="67&#x3001;&#x900F;&#x660E;&#x989C;&#x8272;&#x4E0D;&#x5F71;&#x54CD;&#x5B50;&#x89C6;&#x56FE;&#x900F;&#x660E;&#x5EA6;"></a>67&#x3001;&#x900F;&#x660E;&#x989C;&#x8272;&#x4E0D;&#x5F71;&#x54CD;&#x5B50;&#x89C6;&#x56FE;&#x900F;&#x660E;&#x5EA6;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#76、让label的文字内容显示在左上／右上／左下／右下／中心顶／中心底部"><span class="nav-number">43.</span> <span class="nav-text"><a href="#76&#x3001;&#x8BA9;label&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;&#x663E;&#x793A;&#x5728;&#x5DE6;&#x4E0A;&#xFF0F;&#x53F3;&#x4E0A;&#xFF0F;&#x5DE6;&#x4E0B;&#xFF0F;&#x53F3;&#x4E0B;&#xFF0F;&#x4E2D;&#x5FC3;&#x9876;&#xFF0F;&#x4E2D;&#x5FC3;&#x5E95;&#x90E8;" class="headerlink" title="76&#x3001;&#x8BA9;label&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;&#x663E;&#x793A;&#x5728;&#x5DE6;&#x4E0A;&#xFF0F;&#x53F3;&#x4E0A;&#xFF0F;&#x5DE6;&#x4E0B;&#xFF0F;&#x53F3;&#x4E0B;&#xFF0F;&#x4E2D;&#x5FC3;&#x9876;&#xFF0F;&#x4E2D;&#x5FC3;&#x5E95;&#x90E8;"></a>76&#x3001;&#x8BA9;label&#x7684;&#x6587;&#x5B57;&#x5185;&#x5BB9;&#x663E;&#x793A;&#x5728;&#x5DE6;&#x4E0A;&#xFF0F;&#x53F3;&#x4E0A;&#xFF0F;&#x5DE6;&#x4E0B;&#xFF0F;&#x53F3;&#x4E0B;&#xFF0F;&#x4E2D;&#x5FC3;&#x9876;&#xFF0F;&#x4E2D;&#x5FC3;&#x5E95;&#x90E8;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#77、scrollView上的输入框，键盘挡住的问题"><span class="nav-number">44.</span> <span class="nav-text"><a href="#77&#x3001;scrollView&#x4E0A;&#x7684;&#x8F93;&#x5165;&#x6846;&#xFF0C;&#x952E;&#x76D8;&#x6321;&#x4F4F;&#x7684;&#x95EE;&#x9898;" class="headerlink" title="77&#x3001;scrollView&#x4E0A;&#x7684;&#x8F93;&#x5165;&#x6846;&#xFF0C;&#x952E;&#x76D8;&#x6321;&#x4F4F;&#x7684;&#x95EE;&#x9898;"></a>77&#x3001;scrollView&#x4E0A;&#x7684;&#x8F93;&#x5165;&#x6846;&#xFF0C;&#x952E;&#x76D8;&#x6321;&#x4F4F;&#x7684;&#x95EE;&#x9898;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#78、frame布局的cell动态高度"><span class="nav-number">45.</span> <span class="nav-text"><a href="#78&#x3001;frame&#x5E03;&#x5C40;&#x7684;cell&#x52A8;&#x6001;&#x9AD8;&#x5EA6;" class="headerlink" title="78&#x3001;frame&#x5E03;&#x5C40;&#x7684;cell&#x52A8;&#x6001;&#x9AD8;&#x5EA6;"></a>78&#x3001;frame&#x5E03;&#x5C40;&#x7684;cell&#x52A8;&#x6001;&#x9AD8;&#x5EA6;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#80、使用performSelector-调用函数，内存泄漏问题"><span class="nav-number">46.</span> <span class="nav-text"><a href="#80&#x3001;&#x4F7F;&#x7528;performSelector-&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x95EE;&#x9898;" class="headerlink" title="80&#x3001;&#x4F7F;&#x7528;performSelector:&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x95EE;&#x9898;"></a>80&#x3001;&#x4F7F;&#x7528;performSelector:&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x95EE;&#x9898;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#81、一个字符串是否包含另一个字符串"><span class="nav-number">47.</span> <span class="nav-text"><a href="#81&#x3001;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;" class="headerlink" title="81&#x3001;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;"></a>81&#x3001;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#82、cell去除选中效果"><span class="nav-number">48.</span> <span class="nav-text"><a href="#82&#x3001;cell&#x53BB;&#x9664;&#x9009;&#x4E2D;&#x6548;&#x679C;" class="headerlink" title="82&#x3001;cell&#x53BB;&#x9664;&#x9009;&#x4E2D;&#x6548;&#x679C;"></a>82&#x3001;cell&#x53BB;&#x9664;&#x9009;&#x4E2D;&#x6548;&#x679C;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#83、cell点按效果"><span class="nav-number">49.</span> <span class="nav-text"><a href="#83&#x3001;cell&#x70B9;&#x6309;&#x6548;&#x679C;" class="headerlink" title="83&#x3001;cell&#x70B9;&#x6309;&#x6548;&#x679C;"></a>83&#x3001;cell&#x70B9;&#x6309;&#x6548;&#x679C;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#108、自定义cell选中背景颜色"><span class="nav-number">50.</span> <span class="nav-text"><a href="#108&#x3001;&#x81EA;&#x5B9A;&#x4E49;cell&#x9009;&#x4E2D;&#x80CC;&#x666F;&#x989C;&#x8272;" class="headerlink" title="108&#x3001;&#x81EA;&#x5B9A;&#x4E49;cell&#x9009;&#x4E2D;&#x80CC;&#x666F;&#x989C;&#x8272;"></a>108&#x3001;&#x81EA;&#x5B9A;&#x4E49;cell&#x9009;&#x4E2D;&#x80CC;&#x666F;&#x989C;&#x8272;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#85、真机测试的时候报错：Could-not-launch-“你的-App”，process-launch-failed-Security"><span class="nav-number">51.</span> <span class="nav-text"><a href="#85&#x3001;&#x771F;&#x673A;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#x62A5;&#x9519;&#xFF1A;Could-not-launch-&#x201C;&#x4F60;&#x7684;-App&#x201D;&#xFF0C;process-launch-failed-Security" class="headerlink" title="85&#x3001;&#x771F;&#x673A;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#x62A5;&#x9519;&#xFF1A;Could not launch &#x201C;&#x4F60;&#x7684; App&#x201D;&#xFF0C;process launch failed: Security"></a>85&#x3001;&#x771F;&#x673A;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#x62A5;&#x9519;&#xFF1A;Could not launch &#x201C;&#x4F60;&#x7684; App&#x201D;&#xFF0C;process launch failed: Security</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#86、真机测试的时候报错：Could-not-find-Developer-Disk-Image"><span class="nav-number">52.</span> <span class="nav-text"><a href="#86&#x3001;&#x771F;&#x673A;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#x62A5;&#x9519;&#xFF1A;Could-not-find-Developer-Disk-Image" class="headerlink" title="86&#x3001;&#x771F;&#x673A;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#x62A5;&#x9519;&#xFF1A;Could not find Developer Disk Image"></a>86&#x3001;&#x771F;&#x673A;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#x62A5;&#x9519;&#xFF1A;Could not find Developer Disk Image</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#88、移除字符串中的空格和换行"><span class="nav-number">53.</span> <span class="nav-text"><a href="#88&#x3001;&#x79FB;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x7A7A;&#x683C;&#x548C;&#x6362;&#x884C;" class="headerlink" title="88&#x3001;&#x79FB;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x7A7A;&#x683C;&#x548C;&#x6362;&#x884C;"></a>88&#x3001;&#x79FB;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x7A7A;&#x683C;&#x548C;&#x6362;&#x884C;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#89、判断字符串中是否有空格"><span class="nav-number">54.</span> <span class="nav-text"><a href="#89&#x3001;&#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x7A7A;&#x683C;" class="headerlink" title="89&#x3001;&#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x7A7A;&#x683C;"></a>89&#x3001;&#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x7A7A;&#x683C;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#92、字符串是否为空"><span class="nav-number">55.</span> <span class="nav-text"><a href="#92&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x4E3A;&#x7A7A;" class="headerlink" title="92&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x4E3A;&#x7A7A;"></a>92&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x4E3A;&#x7A7A;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#93、将app上传到App-Store的时候通常会遇到这个问题"><span class="nav-number">56.</span> <span class="nav-text"><a href="#93&#x3001;&#x5C06;app&#x4E0A;&#x4F20;&#x5230;App-Store&#x7684;&#x65F6;&#x5019;&#x901A;&#x5E38;&#x4F1A;&#x9047;&#x5230;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;" class="headerlink" title="93&#x3001;&#x5C06;app&#x4E0A;&#x4F20;&#x5230;App Store&#x7684;&#x65F6;&#x5019;&#x901A;&#x5E38;&#x4F1A;&#x9047;&#x5230;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;"></a>93&#x3001;&#x5C06;app&#x4E0A;&#x4F20;&#x5230;App Store&#x7684;&#x65F6;&#x5019;&#x901A;&#x5E38;&#x4F1A;&#x9047;&#x5230;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#94、当tableView占不满一屏时，去除下边多余的单元格"><span class="nav-number">57.</span> <span class="nav-text"><a href="#94&#x3001;&#x5F53;tableView&#x5360;&#x4E0D;&#x6EE1;&#x4E00;&#x5C4F;&#x65F6;&#xFF0C;&#x53BB;&#x9664;&#x4E0B;&#x8FB9;&#x591A;&#x4F59;&#x7684;&#x5355;&#x5143;&#x683C;" class="headerlink" title="94&#x3001;&#x5F53;tableView&#x5360;&#x4E0D;&#x6EE1;&#x4E00;&#x5C4F;&#x65F6;&#xFF0C;&#x53BB;&#x9664;&#x4E0B;&#x8FB9;&#x591A;&#x4F59;&#x7684;&#x5355;&#x5143;&#x683C;"></a>94&#x3001;&#x5F53;tableView&#x5360;&#x4E0D;&#x6EE1;&#x4E00;&#x5C4F;&#x65F6;&#xFF0C;&#x53BB;&#x9664;&#x4E0B;&#x8FB9;&#x591A;&#x4F59;&#x7684;&#x5355;&#x5143;&#x683C;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#95、isKindOfClass和isMemberOfClass的区别"><span class="nav-number">58.</span> <span class="nav-text"><a href="#95&#x3001;isKindOfClass&#x548C;isMemberOfClass&#x7684;&#x533A;&#x522B;" class="headerlink" title="95&#x3001;isKindOfClass&#x548C;isMemberOfClass&#x7684;&#x533A;&#x522B;"></a>95&#x3001;isKindOfClass&#x548C;isMemberOfClass&#x7684;&#x533A;&#x522B;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#101、将tableView滚动到顶部"><span class="nav-number">59.</span> <span class="nav-text"><a href="#101&#x3001;&#x5C06;tableView&#x6EDA;&#x52A8;&#x5230;&#x9876;&#x90E8;" class="headerlink" title="101&#x3001;&#x5C06;tableView&#x6EDA;&#x52A8;&#x5230;&#x9876;&#x90E8;"></a>101&#x3001;&#x5C06;tableView&#x6EDA;&#x52A8;&#x5230;&#x9876;&#x90E8;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#102、如果用addTarget-action-forControlEvents-方法为一个button添加了很多点击事件，在某个时刻想一次删除怎么办？只需要调用下边这句代码"><span class="nav-number">60.</span> <span class="nav-text"><a href="#102&#x3001;&#x5982;&#x679C;&#x7528;addTarget-action-forControlEvents-&#x65B9;&#x6CD5;&#x4E3A;&#x4E00;&#x4E2A;button&#x6DFB;&#x52A0;&#x4E86;&#x5F88;&#x591A;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#xFF0C;&#x5728;&#x67D0;&#x4E2A;&#x65F6;&#x523B;&#x60F3;&#x4E00;&#x6B21;&#x5220;&#x9664;&#x600E;&#x4E48;&#x529E;&#xFF1F;&#x53EA;&#x9700;&#x8981;&#x8C03;&#x7528;&#x4E0B;&#x8FB9;&#x8FD9;&#x53E5;&#x4EE3;&#x7801;" class="headerlink" title="102&#x3001;&#x5982;&#x679C;&#x7528;addTarget:action:forControlEvents:&#x65B9;&#x6CD5;&#x4E3A;&#x4E00;&#x4E2A;button&#x6DFB;&#x52A0;&#x4E86;&#x5F88;&#x591A;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#xFF0C;&#x5728;&#x67D0;&#x4E2A;&#x65F6;&#x523B;&#x60F3;&#x4E00;&#x6B21;&#x5220;&#x9664;&#x600E;&#x4E48;&#x529E;&#xFF1F;&#x53EA;&#x9700;&#x8981;&#x8C03;&#x7528;&#x4E0B;&#x8FB9;&#x8FD9;&#x53E5;&#x4EE3;&#x7801;"></a>102&#x3001;&#x5982;&#x679C;&#x7528;addTarget:action:forControlEvents:&#x65B9;&#x6CD5;&#x4E3A;&#x4E00;&#x4E2A;button&#x6DFB;&#x52A0;&#x4E86;&#x5F88;&#x591A;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#xFF0C;&#x5728;&#x67D0;&#x4E2A;&#x65F6;&#x523B;&#x60F3;&#x4E00;&#x6B21;&#x5220;&#x9664;&#x600E;&#x4E48;&#x529E;&#xFF1F;&#x53EA;&#x9700;&#x8981;&#x8C03;&#x7528;&#x4E0B;&#x8FB9;&#x8FD9;&#x53E5;&#x4EE3;&#x7801;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#104、删除某个view所有的子视图"><span class="nav-number">61.</span> <span class="nav-text"><a href="#104&#x3001;&#x5220;&#x9664;&#x67D0;&#x4E2A;view&#x6240;&#x6709;&#x7684;&#x5B50;&#x89C6;&#x56FE;" class="headerlink" title="104&#x3001;&#x5220;&#x9664;&#x67D0;&#x4E2A;view&#x6240;&#x6709;&#x7684;&#x5B50;&#x89C6;&#x56FE;"></a>104&#x3001;&#x5220;&#x9664;&#x67D0;&#x4E2A;view&#x6240;&#x6709;&#x7684;&#x5B50;&#x89C6;&#x56FE;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#105、删除NSUserDefaults所有记录"><span class="nav-number">62.</span> <span class="nav-text"><a href="#105&#x3001;&#x5220;&#x9664;NSUserDefaults&#x6240;&#x6709;&#x8BB0;&#x5F55;" class="headerlink" title="105&#x3001;&#x5220;&#x9664;NSUserDefaults&#x6240;&#x6709;&#x8BB0;&#x5F55;"></a>105&#x3001;&#x5220;&#x9664;NSUserDefaults&#x6240;&#x6709;&#x8BB0;&#x5F55;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#106、禁用系统滑动返回功能"><span class="nav-number">63.</span> <span class="nav-text"><a href="#106&#x3001;&#x7981;&#x7528;&#x7CFB;&#x7EDF;&#x6ED1;&#x52A8;&#x8FD4;&#x56DE;&#x529F;&#x80FD;" class="headerlink" title="106&#x3001;&#x7981;&#x7528;&#x7CFB;&#x7EDF;&#x6ED1;&#x52A8;&#x8FD4;&#x56DE;&#x529F;&#x80FD;"></a>106&#x3001;&#x7981;&#x7528;&#x7CFB;&#x7EDF;&#x6ED1;&#x52A8;&#x8FD4;&#x56DE;&#x529F;&#x80FD;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#112、scrollView滚动到最下边"><span class="nav-number">64.</span> <span class="nav-text"><a href="#112&#x3001;scrollView&#x6EDA;&#x52A8;&#x5230;&#x6700;&#x4E0B;&#x8FB9;" class="headerlink" title="112&#x3001;scrollView&#x6EDA;&#x52A8;&#x5230;&#x6700;&#x4E0B;&#x8FB9;"></a>112&#x3001;scrollView&#x6EDA;&#x52A8;&#x5230;&#x6700;&#x4E0B;&#x8FB9;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#113、UIView背景颜色渐变"><span class="nav-number">65.</span> <span class="nav-text"><a href="#113&#x3001;UIView&#x80CC;&#x666F;&#x989C;&#x8272;&#x6E10;&#x53D8;" class="headerlink" title="113&#x3001;UIView&#x80CC;&#x666F;&#x989C;&#x8272;&#x6E10;&#x53D8;"></a>113&#x3001;UIView&#x80CC;&#x666F;&#x989C;&#x8272;&#x6E10;&#x53D8;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#114、停止UIView动画"><span class="nav-number">66.</span> <span class="nav-text"><a href="#114&#x3001;&#x505C;&#x6B62;UIView&#x52A8;&#x753B;" class="headerlink" title="114&#x3001;&#x505C;&#x6B62;UIView&#x52A8;&#x753B;"></a>114&#x3001;&#x505C;&#x6B62;UIView&#x52A8;&#x753B;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#115、为UIView某个角添加圆角"><span class="nav-number">67.</span> <span class="nav-text"><a href="#115&#x3001;&#x4E3A;UIView&#x67D0;&#x4E2A;&#x89D2;&#x6DFB;&#x52A0;&#x5706;&#x89D2;" class="headerlink" title="115&#x3001;&#x4E3A;UIView&#x67D0;&#x4E2A;&#x89D2;&#x6DFB;&#x52A0;&#x5706;&#x89D2;"></a>115&#x3001;&#x4E3A;UIView&#x67D0;&#x4E2A;&#x89D2;&#x6DFB;&#x52A0;&#x5706;&#x89D2;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#117、将一个view放置在其兄弟视图的最上面"><span class="nav-number">68.</span> <span class="nav-text"><a href="#117&#x3001;&#x5C06;&#x4E00;&#x4E2A;view&#x653E;&#x7F6E;&#x5728;&#x5176;&#x5144;&#x5F1F;&#x89C6;&#x56FE;&#x7684;&#x6700;&#x4E0A;&#x9762;" class="headerlink" title="117&#x3001;&#x5C06;&#x4E00;&#x4E2A;view&#x653E;&#x7F6E;&#x5728;&#x5176;&#x5144;&#x5F1F;&#x89C6;&#x56FE;&#x7684;&#x6700;&#x4E0A;&#x9762;"></a>117&#x3001;&#x5C06;&#x4E00;&#x4E2A;view&#x653E;&#x7F6E;&#x5728;&#x5176;&#x5144;&#x5F1F;&#x89C6;&#x56FE;&#x7684;&#x6700;&#x4E0A;&#x9762;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#118、将一个view放置在其兄弟视图的最下面"><span class="nav-number">69.</span> <span class="nav-text"><a href="#118&#x3001;&#x5C06;&#x4E00;&#x4E2A;view&#x653E;&#x7F6E;&#x5728;&#x5176;&#x5144;&#x5F1F;&#x89C6;&#x56FE;&#x7684;&#x6700;&#x4E0B;&#x9762;" class="headerlink" title="118&#x3001;&#x5C06;&#x4E00;&#x4E2A;view&#x653E;&#x7F6E;&#x5728;&#x5176;&#x5144;&#x5F1F;&#x89C6;&#x56FE;&#x7684;&#x6700;&#x4E0B;&#x9762;"></a>118&#x3001;&#x5C06;&#x4E00;&#x4E2A;view&#x653E;&#x7F6E;&#x5728;&#x5176;&#x5144;&#x5F1F;&#x89C6;&#x56FE;&#x7684;&#x6700;&#x4E0B;&#x9762;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#119、让手机震动一下"><span class="nav-number">70.</span> <span class="nav-text"><a href="#119&#x3001;&#x8BA9;&#x624B;&#x673A;&#x9707;&#x52A8;&#x4E00;&#x4E0B;" class="headerlink" title="119&#x3001;&#x8BA9;&#x624B;&#x673A;&#x9707;&#x52A8;&#x4E00;&#x4E0B;"></a>119&#x3001;&#x8BA9;&#x624B;&#x673A;&#x9707;&#x52A8;&#x4E00;&#x4E0B;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#120、layoutSubviews方法什么时候调用？"><span class="nav-number">71.</span> <span class="nav-text"><a href="#120&#x3001;layoutSubviews&#x65B9;&#x6CD5;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x8C03;&#x7528;&#xFF1F;" class="headerlink" title="120&#x3001;layoutSubviews&#x65B9;&#x6CD5;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x8C03;&#x7528;&#xFF1F;"></a>120&#x3001;layoutSubviews&#x65B9;&#x6CD5;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x8C03;&#x7528;&#xFF1F;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#122、摇一摇功能"><span class="nav-number">72.</span> <span class="nav-text"><a href="#122&#x3001;&#x6447;&#x4E00;&#x6447;&#x529F;&#x80FD;" class="headerlink" title="122&#x3001;&#x6447;&#x4E00;&#x6447;&#x529F;&#x80FD;"></a>122&#x3001;&#x6447;&#x4E00;&#x6447;&#x529F;&#x80FD;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#123、获取图片大小"><span class="nav-number">73.</span> <span class="nav-text"><a href="#123&#x3001;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x5927;&#x5C0F;" class="headerlink" title="123&#x3001;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x5927;&#x5C0F;"></a>123&#x3001;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x5927;&#x5C0F;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#124、获取view的坐标在整个window上的位置"><span class="nav-number">74.</span> <span class="nav-text"><a href="#124&#x3001;&#x83B7;&#x53D6;view&#x7684;&#x5750;&#x6807;&#x5728;&#x6574;&#x4E2A;window&#x4E0A;&#x7684;&#x4F4D;&#x7F6E;" class="headerlink" title="124&#x3001;&#x83B7;&#x53D6;view&#x7684;&#x5750;&#x6807;&#x5728;&#x6574;&#x4E2A;window&#x4E0A;&#x7684;&#x4F4D;&#x7F6E;"></a>124&#x3001;&#x83B7;&#x53D6;view&#x7684;&#x5750;&#x6807;&#x5728;&#x6574;&#x4E2A;window&#x4E0A;&#x7684;&#x4F4D;&#x7F6E;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#125、提交App-Store审核程序限制"><span class="nav-number">75.</span> <span class="nav-text"><a href="#125&#x3001;&#x63D0;&#x4EA4;App-Store&#x5BA1;&#x6838;&#x7A0B;&#x5E8F;&#x9650;&#x5236;" class="headerlink" title="125&#x3001;&#x63D0;&#x4EA4;App Store&#x5BA1;&#x6838;&#x7A0B;&#x5E8F;&#x9650;&#x5236;"></a>125&#x3001;&#x63D0;&#x4EA4;App Store&#x5BA1;&#x6838;&#x7A0B;&#x5E8F;&#x9650;&#x5236;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#127、在非ViewController的地方弹出UIAlertController对话框"><span class="nav-number">76.</span> <span class="nav-text"><a href="#127&#x3001;&#x5728;&#x975E;ViewController&#x7684;&#x5730;&#x65B9;&#x5F39;&#x51FA;UIAlertController&#x5BF9;&#x8BDD;&#x6846;" class="headerlink" title="127&#x3001;&#x5728;&#x975E;ViewController&#x7684;&#x5730;&#x65B9;&#x5F39;&#x51FA;UIAlertController&#x5BF9;&#x8BDD;&#x6846;"></a>127&#x3001;&#x5728;&#x975E;ViewController&#x7684;&#x5730;&#x65B9;&#x5F39;&#x51FA;UIAlertController&#x5BF9;&#x8BDD;&#x6846;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#128、获取一个view所属的控制器"><span class="nav-number">77.</span> <span class="nav-text"><a href="#128&#x3001;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;view&#x6240;&#x5C5E;&#x7684;&#x63A7;&#x5236;&#x5668;" class="headerlink" title="128&#x3001;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;view&#x6240;&#x5C5E;&#x7684;&#x63A7;&#x5236;&#x5668;"></a>128&#x3001;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;view&#x6240;&#x5C5E;&#x7684;&#x63A7;&#x5236;&#x5668;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#129、UIImage和base64互转"><span class="nav-number">78.</span> <span class="nav-text"><a href="#129&#x3001;UIImage&#x548C;base64&#x4E92;&#x8F6C;" class="headerlink" title="129&#x3001;UIImage&#x548C;base64&#x4E92;&#x8F6C;"></a>129&#x3001;UIImage&#x548C;base64&#x4E92;&#x8F6C;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#132、设置tableView分割线颜色"><span class="nav-number">79.</span> <span class="nav-text"><a href="#132&#x3001;&#x8BBE;&#x7F6E;tableView&#x5206;&#x5272;&#x7EBF;&#x989C;&#x8272;" class="headerlink" title="132&#x3001;&#x8BBE;&#x7F6E;tableView&#x5206;&#x5272;&#x7EBF;&#x989C;&#x8272;"></a>132&#x3001;&#x8BBE;&#x7F6E;tableView&#x5206;&#x5272;&#x7EBF;&#x989C;&#x8272;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#133、设置屏幕方向"><span class="nav-number">80.</span> <span class="nav-text"><a href="#133&#x3001;&#x8BBE;&#x7F6E;&#x5C4F;&#x5E55;&#x65B9;&#x5411;" class="headerlink" title="133&#x3001;&#x8BBE;&#x7F6E;&#x5C4F;&#x5E55;&#x65B9;&#x5411;"></a>133&#x3001;&#x8BBE;&#x7F6E;&#x5C4F;&#x5E55;&#x65B9;&#x5411;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#134、比较两个颜色是否相等"><span class="nav-number">81.</span> <span class="nav-text"><a href="#134&#x3001;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x989C;&#x8272;&#x662F;&#x5426;&#x76F8;&#x7B49;" class="headerlink" title="134&#x3001;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x989C;&#x8272;&#x662F;&#x5426;&#x76F8;&#x7B49;"></a>134&#x3001;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x989C;&#x8272;&#x662F;&#x5426;&#x76F8;&#x7B49;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#135、tableViewCell分割线顶到头"><span class="nav-number">82.</span> <span class="nav-text"><a href="#135&#x3001;tableViewCell&#x5206;&#x5272;&#x7EBF;&#x9876;&#x5230;&#x5934;" class="headerlink" title="135&#x3001;tableViewCell&#x5206;&#x5272;&#x7EBF;&#x9876;&#x5230;&#x5934;"></a>135&#x3001;tableViewCell&#x5206;&#x5272;&#x7EBF;&#x9876;&#x5230;&#x5934;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#139、在状态栏增加网络请求的菊花，类似safari加载网页的时候状态栏菊花"><span class="nav-number">83.</span> <span class="nav-text"><a href="#139&#x3001;&#x5728;&#x72B6;&#x6001;&#x680F;&#x589E;&#x52A0;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x7684;&#x83CA;&#x82B1;&#xFF0C;&#x7C7B;&#x4F3C;safari&#x52A0;&#x8F7D;&#x7F51;&#x9875;&#x7684;&#x65F6;&#x5019;&#x72B6;&#x6001;&#x680F;&#x83CA;&#x82B1;" class="headerlink" title="139&#x3001;&#x5728;&#x72B6;&#x6001;&#x680F;&#x589E;&#x52A0;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x7684;&#x83CA;&#x82B1;&#xFF0C;&#x7C7B;&#x4F3C;safari&#x52A0;&#x8F7D;&#x7F51;&#x9875;&#x7684;&#x65F6;&#x5019;&#x72B6;&#x6001;&#x680F;&#x83CA;&#x82B1;"></a>139&#x3001;&#x5728;&#x72B6;&#x6001;&#x680F;&#x589E;&#x52A0;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x7684;&#x83CA;&#x82B1;&#xFF0C;&#x7C7B;&#x4F3C;safari&#x52A0;&#x8F7D;&#x7F51;&#x9875;&#x7684;&#x65F6;&#x5019;&#x72B6;&#x6001;&#x680F;&#x83CA;&#x82B1;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#142、将一个image保存在相册中"><span class="nav-number">84.</span> <span class="nav-text"><a href="#142&#x3001;&#x5C06;&#x4E00;&#x4E2A;image&#x4FDD;&#x5B58;&#x5728;&#x76F8;&#x518C;&#x4E2D;" class="headerlink" title="142&#x3001;&#x5C06;&#x4E00;&#x4E2A;image&#x4FDD;&#x5B58;&#x5728;&#x76F8;&#x518C;&#x4E2D;"></a>142&#x3001;&#x5C06;&#x4E00;&#x4E2A;image&#x4FDD;&#x5B58;&#x5728;&#x76F8;&#x518C;&#x4E2D;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#144、为一个view添加虚线边框"><span class="nav-number">85.</span> <span class="nav-text"><a href="#144&#x3001;&#x4E3A;&#x4E00;&#x4E2A;view&#x6DFB;&#x52A0;&#x865A;&#x7EBF;&#x8FB9;&#x6846;" class="headerlink" title="144&#x3001;&#x4E3A;&#x4E00;&#x4E2A;view&#x6DFB;&#x52A0;&#x865A;&#x7EBF;&#x8FB9;&#x6846;"></a>144&#x3001;&#x4E3A;&#x4E00;&#x4E2A;view&#x6DFB;&#x52A0;&#x865A;&#x7EBF;&#x8FB9;&#x6846;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#145、UITextView中打开或禁用复制，剪切，选择，全选等功能"><span class="nav-number">86.</span> <span class="nav-text"><a href="#145&#x3001;UITextView&#x4E2D;&#x6253;&#x5F00;&#x6216;&#x7981;&#x7528;&#x590D;&#x5236;&#xFF0C;&#x526A;&#x5207;&#xFF0C;&#x9009;&#x62E9;&#xFF0C;&#x5168;&#x9009;&#x7B49;&#x529F;&#x80FD;" class="headerlink" title="145&#x3001;UITextView&#x4E2D;&#x6253;&#x5F00;&#x6216;&#x7981;&#x7528;&#x590D;&#x5236;&#xFF0C;&#x526A;&#x5207;&#xFF0C;&#x9009;&#x62E9;&#xFF0C;&#x5168;&#x9009;&#x7B49;&#x529F;&#x80FD;"></a>145&#x3001;UITextView&#x4E2D;&#x6253;&#x5F00;&#x6216;&#x7981;&#x7528;&#x590D;&#x5236;&#xFF0C;&#x526A;&#x5207;&#xFF0C;&#x9009;&#x62E9;&#xFF0C;&#x5168;&#x9009;&#x7B49;&#x529F;&#x80FD;</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1386,6 +716,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
